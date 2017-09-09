@@ -1,0 +1,30 @@
+git init：初始化，在公司什么都没有的时候来用
+
+git clone 服务器远程仓库url地址 ：  从服务器克隆项目
+
+git pull ： 拉取项目
+
+git add ./"文件名"  ： 放入暂存区
+
+git commit -m "文件描述"  ：   从暂存区放入本地仓库
+
+git push 库名 master分支   ：   从本地仓库放上传到服务器
+
+git remote ：查看有哪些仓库
+
+git remote add 远程仓库名 ：添加仓库
+
+git stash ：解决冲突的//暂存后pull就可以进行合并了
+
+git stash pop ：stash和pull下来的进行合并
+
+git stash list：查找stash的列表
+
+/**********回退到某一个历史版本**********/
+git log：查看所有的历史版本     如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数
+
+git reset --hard 版本id号：
+
+git push -f -u origin master：把修改推到远程服务器
+
+git reflog：记录你的每一次命令

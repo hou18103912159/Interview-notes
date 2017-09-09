@@ -1,0 +1,14 @@
+创建XMLHttpRequest对象
+
+.open() 打开数据的格式get/post  数据的地址   是否异步
+
+.send()  发送请求  如果是post则send里面包裹着需要提交的数据
+
+触发onreadystatechange事件
+
+判断如果请求成功获取数据    readyState == 4    status ==200
+
+通过responseText获取数据，这里的数据为字符串，需要进行转换，转为json对象   用JSON.parse
+
+//兼容性问题的话    ie用的ActiveXObject
+ie6以下的参数不一样"Msxml2.XMLHTTP","Microsoft.XMLHTTP"

@@ -1,0 +1,31 @@
+给一个元素添加事件
+	//DOM 0级绑定事件，会产生覆盖     DOM.onclick = null  //取消绑定事件的方式
+	DOM.onclick = function(){} 
+
+	//DOM  2级绑定事件   addEventListener    三个参数：1.事件2.函数3.是否捕获触发
+	
+	
+阻止事件的默认行为
+	preventDefault()  //IE9+和其他现代浏览器
+	returnValue = false   //IE9以下浏览器
+	
+
+阻止事件的冒泡行为
+	stopPropagation()
+	cancelBubble = true
+	
+	
+typeof与instanceof
+	typeof：判断简单数据类型，→string  number 布尔 undefined
+	instanceof：判断复杂数据类型，→数组、对象
+	
+call与apply
+	call：参数形式       call(this,x,y)
+	apply：数组形式	 apply(this,[x,y])
+
+	
+js数据类型：
+	字符串、数字、布尔、数组、对象、Null、Undefined
+	
+
+	

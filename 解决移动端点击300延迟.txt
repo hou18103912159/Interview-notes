@@ -1,0 +1,33 @@
+zepto.js框架
+
+点透事件：点击了操作DOM同时也操作了底层的元素
+				下面如果是个input框，键盘弹出，对用户来说很不友好
+				zepto在原生移动端事件上进行封装了
+				
+				当我点击时触发tap事件，tap事件是tarchstart和tarchend封装的，它首先需要冒泡，冒泡到document上去来触发我这个tap事件，tap事件瞬间就触发了，触发了之后瞬间就消失了，同时触发了click事件，click事件会有一个延迟300毫秒，判断是点击还是长按。东西已经关了，300毫秒还没过去，300毫秒到了的时候才触发click，这个时候已经关了，click触发了，就点击到了下面的元素上
+				
+				
+				
+				如何解决：
+				第一种：可以监听tarchstar或者是tarchend任何一种就行，监听后在里面传入一个event进去，event.preventDefault阻止默认事件，就可以阻止300毫秒延迟
+				第二种：引入一个插件FastClick.js速点击的插件，引入之后不绑定tab事件，直接用click事件，此时click已经解决了300毫秒延迟
+				
+				zepto和jquery有什么区别
+					1.大小比较小
+					2.我感觉我用的里面除了封装了很强的移动端事件之外其余的和jquery差不多，比如jquery中的一些选择器，里面都能用，动画、绑定事件也都能用，而且通过.on绑定事件，可以通过.off移除事件，也是$符号，基本上当jquery用，遇到不会再看文档。
+				
+zepto封装事件***********			
+	tap类事件							
+		触碰事件，我目前还不知道他和touch的区别，一般用于代替click事件，有tap  longTap  singleTap  doubleTap 四种之分
+		tap：手指碰一下屏幕会触发
+		longTap：手指长按屏幕会触发
+		singleTap：手指碰一下屏幕会触发
+		doubleTap：手指双击屏幕会触发
+	
+	swipe类事件
+		滑动事件，有swipe swipeLeft swipeRight swipeUp swipeDown 五种之分
+		swipe：手指在屏幕上滑动时会触发
+		swipeLeft：手指在屏幕上向左滑动时会触发
+		swipeRight：手指在屏幕上向右滑动时会触发
+		swipeUp：手指在屏幕上向上滑动时会触发
+		swipeDown：手指在屏幕上向下滑动时会触发
