@@ -1,5 +1,7 @@
 git init：初始化，在公司什么都没有的时候来用
 
+git remote add 仓库名 仓库所在地址：创建一个项目仓库关联到gitHub上
+
 git clone 服务器远程仓库url地址 ：  从服务器克隆项目
 
 git pull ： 拉取项目
