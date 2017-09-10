@@ -1,0 +1,50 @@
+生命周期钩子：   8个
+	beforeCreate：对象创建之前调用
+	created：对象创建之后调用
+	beforeMount：挂载前
+	mounted：挂在后
+	beforeUpdate：更新前
+	updated：更新后
+	beforeDestroy：销毁前
+	destroyed：销毁后
+	
+指令钩子：   5个
+	bind：第一次绑定时调用，初始化
+	update：更新时调用
+	inserted：插入时调用
+	componentUpdated：完成一次更新周期时调用
+	unbind：解绑时调用
+	
+	指令钩子函数的参数：   4个
+		el：指令所绑定的元素
+		binding：一个对象，里面有6个属性
+		vnode：虚拟节点
+		oldVnode：上一个虚拟节点，仅在update和componentUpdate钩子中使用
+		
+		binding属性：    6个
+			name：指令名
+			value：指令绑定的值
+			oldvalue：前一个值
+			expression：绑定值的字符串形式
+			arg：传给指令的参数
+			modifiers：一个包含修饰符的对象
+
+路由的钩子函数:      6个
+	两个全局钩子函数：
+		beforeEach：在路由切换开始时调用
+		afterEach：在每次路由切换成功进入激活状态时被调用
+	某个路由独享的钩子：
+		beforeEnter：可以直接在路由配置上定义
+	组件内部的钩子：
+		beforeRouteEnter：
+			在渲染该组件的对应路由被confirm前调用；
+			不能获取组件实例this；
+			因为当钩子执行前，组建实例还没被创建
+		beforeRouteUpdate（2.2新增）：
+			在当前路由改变，但是该组件被复用时调用；
+			举例来说，对于一个带有动态参数的路径/foo/:id和/foo/2之间跳转的时候；
+			由于会渲染同样的foo组件，因此组件实例会被重复调用。而这个钩子就会在这个情况下被调用；
+			可以访问组件实例this
+		beforeRouteLeave：
+			导航离开该组件的对应路由时调用
+			可以访问组件实例this
