@@ -1,0 +1,15 @@
+父容器：
+1、flex-direction：决定主轴的方向
+2、flex-wrap：如果一条轴线排不下如何换行
+3、flex-flow：以上两种的简写（不建议使用）
+4、justify-content：定义项目在主轴上的对齐方式
+5、align-items：定义项目在交叉轴上的对齐方式
+6、align-content：定义多跟轴线的对齐方式
+
+每个项目：
+7、order：排列排序，值越小越靠前
+8、flex-grow：项目方法比例
+9、flex-shrink：项目缩小比例
+10、flex-basis：定义分配多余空间之前项目占据的主轴空间
+11、flex：以上三种的简写（不建议使用）
+12、align-self：允许单个项目与其他项目不一样的对齐方式

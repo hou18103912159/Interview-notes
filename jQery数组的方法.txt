@@ -1,0 +1,6 @@
+$.each(array,[callback])：数组遍历[常用]
+
+$.grep(array,callback,[invert])：数组过滤[常用]
+
+$.map(array,[callback])：按给定条件转换数组
+

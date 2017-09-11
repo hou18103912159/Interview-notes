@@ -1,0 +1,55 @@
+浏览器内核：
+	Trident：IE内核。    
+		IE6、7、8（Trident4.0）、IE9（Trident5.0）、IE10（Trident6.0）；
+		360安全浏览器（1.0-5.0为Trident，6.0为Trident+Webkit，7.0为Trident+Blink）
+		360极速浏览器（7.5之前为Trident+Webkit，7.5为Trident+Blink）
+		猎豹安全浏览器（1.0-4.2版本为Trident+Webkit，4.3及以后版本为Trident+Blink）
+		猎豹极轻浏览器,遨游浏览器、百度浏览器（早起版本）、世界之窗浏览器（）
+		
+	Gecko：Firefox内核    
+		Netscape6开始采用的内核
+		Mozilla FireFox火狐浏览器
+		
+	Presto（Opera前内核）已废弃
+		Opera现已改用Google Chrome的Blink内核
+		
+	Webkit（Safari内核，Chrome内核原型，开源）
+		苹果公司自己的内核，也是苹果的Safari浏览器使用的内核
+		遨游浏览器3
+		Symbian手机浏览器
+		Android默认浏览器
+		谷歌、Safari、搜狗高速浏览器、遨游浏览器3、QQ浏览器、360极速浏览器、世界之窗浏览器（极速版）、阿里云浏览器
+		
+	Blink：由Google和Opera Sofatware开发的浏览器排版引擎
+		这一渲染引擎是开源引擎Webkit中WebCore组件的一个分支
+		并在Chrome(28及往后的版本)、Opera（15及往后的版本）和Yandex浏览器中使用
+		
+		
+	脱离文档流：float 定位relative   fixed
+	
+	-moz-  firefox等使用Mozilla引擎的浏览器
+	-webkit- chrome，safari等使用webkit引擎的浏览器；
+	-o-    Opera早期浏览器；
+	-ms- IE系列浏览器。
+	
+	常用的添加浏览器前缀的CSS3属性有：
+	@keyframes
+	移动和变换属性：transition-property，transition-duration，transition-timing-function，transition-delay；
+	动画属性：animation-name，animation-duration，animation-timing-function，animation-delay；
+	Border-radius；
+	Boxshadow；
+	Backface-visivility；
+	Column属性；
+	Flex属性；
+	Perspective属性；
+	IE6和IE8不支持css3属性，为了确保网站设计能在不支持CSS3 的浏览器中也能正常执行，可以将CSS3Pie文件放到根目录下
+	
+	
+	
+	谷歌字体12px以下就不识别了，可以通过transform：scale（）
+	
+	
+	
+	
+	
+	
