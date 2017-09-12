@@ -1,0 +1,11 @@
+1、Str.charAt(index)：返回指定索引位置的字符
+2、slice(start[,end])：截取字符串，返回字符串片段
+3、substring(start,end)：截取字符串，返回字符串中指定位置的子字符串
+4、substr(start[,length])：截取字符串，length为子字符串中包含字符的个数
+5、indexOf(str[,startIndex])：返回字符串内第一次出现子字符串的位置，如果没有找到则返回-1
+6、lastIndexOf(str[,startindex])：返回字符串内最后一次出现子字符串的位置
+7、search(reExp)：返回与正则表达式查找内容匹配的第一个字符串的位置
+8、concat(str1[,str2])：拼接字符串
+9、split()：将字符串分割成数组
+10、toLowerCase：转小写
+11、toUpperCase：转大写
