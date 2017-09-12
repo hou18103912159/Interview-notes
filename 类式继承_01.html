@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>构造函数继承</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//借用构造函数继承：是在子类的构造函数中调用父类的构造函数，可以达到继承父类的属性，但不能继承父类的原型方法或者原型属性。(很少用)
+		// 父类(人类)   call 和apply  改变当前函数的运行环境  apply的参数是数组形式，call的参数是用逗号分割
+		function Super(age,name){
+			this.age = age;
+			this.name=name;
+			this.say=function(){
+				console.log("我的名字是："+this.name);
+			}
+		}
+//		Super.prototype.say = function (){
+//			console.log("年龄："+this.age);
+//		}
+	
+		// 子类（非洲人）
+		function Sub(age,name){
+//			this指代的当前这个子类
+			
+			Super.call(this,age,name);
+		}
+		var sub1 = new Sub(18,"荆耀鑫");
+		var sub2 = new Sub(28,"荆耀");
+		console.log(sub1.age);
+		console.log(sub1.name);
+		console.log(sub2.age);
+		console.log(sub2.name);
+		
+		 sub1.say();  
+
+			
+			
+			
+		function fn1 (a,b){
+			console.log(a+b);
+		
+		}
+
+//		fn1(3,4)
+//window.fn1(3,4)
+//		fn1.apply(this,[3,4])
+
+	</script>
+</body>
+</html>

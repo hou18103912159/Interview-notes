@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型链继承</title>
+</head>
+<body>
+	
+	<script>
+		// 原型链继承：通过子类的prototype属性指向为父类的一个实例对象，来实现继承，这样就和它的原型对象形成了原型链
+		//缺陷:1.要想为子类新增属性和方法，必须要在new Animal()这样的语句之后执行，不能放到构造器中
+		//	  2.创建子类实例时，无法向父类构造函数传参
+		// 父类
+		function Praent(name){
+			this.name = name;
+		}
+		Praent.prototype.say=function(){
+			console.log("名字叫:"+this.name);
+		}
+		// 子类
+		function Child(age){
+			this.age=age;
+			
+			this.eat= function(){
+				console.log("我爱吃西瓜！")
+			}
+		}
+		
+		// 将子类的prototype属性指向为父类的实例对象    
+		Child.prototype = new Praent("隔壁老王");
+		
+		Child.prototype.ismerray= function(){
+			console.log("我结婚了，在"+this.age+"岁");
+		}
+		
+
+		// 创建一个child对象
+		var child1=new Child(47);
+		var child2=new Child(4);
+		console.log("==============验证原型上方法和内部方法===================")
+		console.log(child1.eat===child2.eat);     //构造函数内部的方法,是每个实例对象私有的
+		console.log(child1.ismerray===child2.ismerray);  //原型链上的方法是给所有实例对象公用的，
+		
+		
+		
+		
+		
+		console.log("我继承来的name属性值为："+child1.name);
+		console.log("这是我自身的属性值："+child1.age);
+		console.log(child2.name);
+		console.log(child2.age);
+		console.log("==========================");
+		child1.ismerray();
+		child1.say();
+
+		// 子类的子类
+		function SubChild(){
+
+		}
+		SubChild.prototype = new Child(20);
+		// 创建一个subchild对象
+		var subChild = new SubChild();   
+		console.log(subChild.age);
+		console.log(subChild.name);
+		console.log(subChild instanceof Praent);    
+		console.log(subChild instanceof Child);
+		console.log(subChild instanceof SubChild);
+
+	</script>
+</body>
+</html>

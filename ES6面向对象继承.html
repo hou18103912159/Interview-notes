@@ -1,0 +1,63 @@
+<!--特点:将继承的语法简化-->
+
+<script type="text/javascript">
+//	//面向对象
+//	class Person {
+//		//为对象添加属性
+//		constructor(name = 'default', age = 0) {
+//				this.name = name;
+//				this.age = age;
+//			}
+//			//为对象添加方法
+//		showName() {
+//			alert(this.name);
+//		}
+//		showAge() {
+//			alert(this.age);
+//		}
+//	}
+//	//继承
+//	class Worker extends Person { //这里即可实现子类的继承
+//		//继承之后，添加子类特有的属性
+//		constructor(name, age, job) {
+//				super(name, age); //使用super()将父类的属性继承过来，同时添加子类自己的新属性。如果不加，这个constructor将会把从父类继承的constructor中的属性和方法覆盖，从而使子类没有继承name,age属性，而报错
+//				this.job = job;
+//			}
+//			//继承之后，添加子类特有的方法
+//		showJob() {
+//			alert(this.job);
+//		}
+//	}
+//	var person1 = new Person('小明', 12);
+//	var person2 = new Person('小李', 51);
+//	var woker = new Worker('子类', 32, 'WEB工程师');
+//	alert(person1.name);
+//	person1.showAge();
+//	person2.showName();
+//	alert(person1.showAge == person2.showAge); //true
+//	woker.showName(); //子类
+//	woker.showAge();
+
+
+	console.log("======================小应用=======================")
+	class Queue {
+		constructor(content) {
+			this._queue = [...content];
+		}
+		shift() {
+			return this._queue.shift();
+		}
+		push(value) {
+			this._queue.push(value);
+			return this._queue.length;
+		}
+	}
+	var q1 = new Queue([1, 2, 3, 4]);
+	var q2 = new Queue([5, 6, 7, 8]);
+	q1.shift();
+	q2.push(9);
+	console.log(q1._queue);
+	console.log(q2._queue);
+	
+	
+</script>

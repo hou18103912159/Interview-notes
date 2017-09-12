@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>混合继承</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//混合继承:利用构造函数继承和原型链继承一起来实现继承
+//		继承父类的属性并保留传参的优点，然后通过将父类实例作为子类原型，实现函数复用
+		function Person(name){
+			this.name = name;
+		}
+//		Person.prototype.say = function(){
+//			console.log("名字："+this.name);
+//		}
+
+		function Student(name,age){
+			Person.call(this,name);    //构造函数继承,call apply继承，本身prototype方式继承所不具备的方法
+			this.age = age;
+		}
+		Student.prototype = new Person();  //把父类的实例添加到子类原型链上
+		Student.prototype.say = function(){
+			console.log("孩子自己的："+this.name+"--"+this.age);
+		}
+		var student1=new Student("小红",18);
+		var student2=new Student("小李",19);
+		student1.say();
+		student2.say();
+		
+		
+//		function Toy(color,size){
+//			this.color = color;
+//			this.size = size;
+//		}
+//		Toy.prototype.play=function(){
+//			console.log("我的颜色是:"+this.color);
+//		}
+//		function CarToy(color,size){
+//			Toy.call(this,color,size);
+//		}
+//		CarToy.prototype = new Toy();
+//		CarToy.prototype.run=function(){
+//			console.log("我是会跑的汽车,我的颜色是"+this.color);
+//		}
+	</script>
+</body>
+</html>
