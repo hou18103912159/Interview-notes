@@ -1,0 +1,20 @@
+全局自定义指令：Vue.directive
+局部自定义指令：directives
+
+1、v-bind：绑定属性，包括class style，可用：替代
+2、v-on：事件的绑定，可用@替代
+3、v-for：列表渲染
+
+4、v-if：
+5、v-else：
+6、v-else-if：
+7、v-show：
+4567：实现元素状态的切换  区别是 show会进行模块的渲染
+
+8、v-model：随着表单控件的不同而有所不同，可以添加修饰符
+9、v-text：绑定文本
+10、v-html：绑定html标签
+11、v-once：只绑定一次
+
+12、v-pre：跳过这个元素和它的子元素的编译过程。可以用来显示原始Mustache标签。跳过大量没有指令的节点会加快编译
+13、v-cloak：这个指令保持在元素上直到关联实例结束编译。和CSS规则如[v-cloak]{display:none}一起用时，这个指令可以隐藏未编译的Mustache标签直到实例完毕

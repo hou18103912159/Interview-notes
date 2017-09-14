@@ -1,0 +1,17 @@
+调用vuex
+const store = new Vuex.Store({
+	state:{
+		count: 0 
+	},
+	mutations:{
+		increment (state) {
+			state.count++
+		}
+	}
+})
+可以通过store.sate来获取状态对象，以及通过store.commit方法触发状态变更
+store.commit('increment')
+console.log(store.state.count)
+
+
+
